@@ -10,7 +10,7 @@ CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.option("-i", "path", default="data/urls.csv", help="Input CSV file contains urls", metavar="PATH")
+@click.option("-i", "path", default="data/urls.csv", help="Input CSV file containing urls.", metavar="PATH")
 def main(path):
     with open(path, "r") as f:
         csv_reader = csv.reader(f, delimiter="|")
